@@ -8,6 +8,8 @@ Spree::Admin::ProductsController.class_eval do
             if !@imported.blank?
                 flash[:error] = @imported[0]
                 redirect_to admin_upload_products_path
+            else
+                flash[:success] = "products uploaded successfully "
             end            
         end
     end    
